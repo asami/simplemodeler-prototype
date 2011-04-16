@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+
+<project name="prototype-demo">
+  <property name="src" location="src"/>
+  <property name="target" location="target"/>
+  <property name="installdir" location="/Users/asami/Development/dev2011/simplemodeler/src/main/resources/org/simplemodeling/SimpleModeler/entities/project/prototypes"/>
+  <property name="zipfile" value="demo.zip"/>
+
+  <target name="archive">
+    <zip basedir="${src}"
+	 destfile="${target}/${zipfile}"/>
+  </target>
+
+  <target name="install" depends="archive" if="installdir">
+    <copy file="${target}/${zipfile}"
+	  todir="${installdir}"/>
+  </target>
+</project>

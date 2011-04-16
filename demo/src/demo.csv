@@ -1,0 +1,6 @@
+#actor,parts,attrs
+customer,,phone
+#resource
+goods,,note
+#event
+buy,customer;goods

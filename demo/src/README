@@ -1,0 +1,20 @@
+simplemodeler –convert demo.csv
+
+simplemodeler –project demo
+cd demo
+simplemodeler –import ../demo.csv –import.package:com.demo
+mvn compile
+
+[Eclipse]gaejプロジェクト作成
+# simplemodeler –gaej com.demo –gaej.project:simplemodelerdemo –gaej.gwt –output:../gaej
+simplemodeler-0.1.9 -gaej com.demo -gaej.project:simplemodelerdemo -output:../../../eclipse-home/simplemodelergaejdemo/
+[Eclipse]リフレッシュ
+[Eclipse]Gaejプロジェクト起動
+[Eclipse]Googleアップロード
+
+simplemodeler –convert yorozu.csv
+simplemodeler –project yorozu
+cd yorozu
+simplemodeler –import ../yorozu.csv
+mvn compile
+simplemodeler –html com.yorozu –output:target/html.d
